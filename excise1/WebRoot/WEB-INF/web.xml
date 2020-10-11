@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>excise1</display-name>
+  <servlet>
+    <servlet-name>CreateVerificationCodeImage</servlet-name>
+    <servlet-class>dao.CreateVerificationCodeImage</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CreateVerfifyCodeImageServlet</servlet-name>
+    <servlet-class>controller.Logincontroller.CreateVerfifyCodeImageServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CreateVerifyImageController</servlet-name>
+    <servlet-class>controller.Logincontroller.CreateVerifyImageController</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CreateImage</servlet-name>
+    <servlet-class>dao.CreateImage</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>LoginController</servlet-name>
+    <servlet-class>controller.Logincontroller.LoginController</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UserDao</servlet-name>
+    <servlet-class>dao.UserDao</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>User</servlet-name>
+    <servlet-class>vo.User</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>LogoutController</servlet-name>
+    <servlet-class>controller.Logincontroller.LogoutController</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Show</servlet-name>
+    <servlet-class>controller.Logincontroller.Show</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DownloadListController</servlet-name>
+    <servlet-class>controller.Logincontroller.DownloadListController</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetDownloadListController</servlet-name>
+    <servlet-class>controller.Logincontroller.GetDownloadListController</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DownloadController</servlet-name>
+    <servlet-class>controller.Logincontroller.DownloadController</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>CreateVerificationCodeImage</servlet-name>
+    <url-pattern>/servlet/CreateVerificationCodeImage</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CreateVerfifyCodeImageServlet</servlet-name>
+    <url-pattern>/servlet/CreateVerfifyCodeImageServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CreateVerifyImageController</servlet-name>
+    <url-pattern>/servlet/CreateVerifyImageController</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CreateImage</servlet-name>
+    <url-pattern>/servlet/CreateImage</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoginController</servlet-name>
+    <url-pattern>/servlet/LoginController</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UserDao</servlet-name>
+    <url-pattern>/servlet/UserDao</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>User</servlet-name>
+    <url-pattern>/servlet/User</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LogoutController</servlet-name>
+    <url-pattern>/servlet/LogoutController.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Show</servlet-name>
+    <url-pattern>/servlet/Show</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DownloadListController</servlet-name>
+    <url-pattern>/servlet/DownloadListController</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetDownloadListController</servlet-name>
+    <url-pattern>/servlet/GetDownloadListController</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DownloadController</servlet-name>
+    <url-pattern>/servlet/DownloadController</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
