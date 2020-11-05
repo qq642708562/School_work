@@ -16,9 +16,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<meta http-equiv="expires" content="0">    
 	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 	<meta http-equiv="description" content="This is my page">
-	<!--
-	<link rel="stylesheet" type="text/css" href="styles.css">
-	-->
 	<style>
 		#left{
 			float: left; 
@@ -44,7 +41,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	document.getElementById('txt').innerHTML=ct;
 	if(ct===0)
 	{
-	    window.location="login.jsp";
+	    window.location="login.html";
 	}
 	else{
 	ct--;
@@ -58,7 +55,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <body>
     <body onload="startTime()">
     	<div id="left">
-    		<img src="image/error.png"/>
+    		<img src="images/error.png"/>
     		
     	</div>
     	<div id="right">
@@ -67,7 +64,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				${error_1}
 			</h2>
     		<h1><span id="txt"></span>秒后自动返回登录页面</h2>
-    		<h1><span>不能跳转，请</span><a style="color: red; " href="login.jsp">点击这里</a></h1>
+    		<h1><span>不能跳转，请</span><a style="color: red; " href="login.html">点击这里</a></h1>
     	</div>
     </body>
   </body>

@@ -14,13 +14,14 @@ import javax.servlet.http.HttpServletResponse;
 import dao.DownloadDao;
 import vo.Download;
 
-@WebServlet(urlPatterns="/getDownloadList.do")
+@WebServlet(urlPatterns="/GetDownloadList.do")
 public class GetDownloadListController extends HttpServlet {
 	public void doGet(HttpServletRequest request,HttpServletResponse response)
 	throws ServletException,IOException{
 		DownloadDao dao = new DownloadDao();
 		ArrayList<Download> list = dao.query();
-		request.setAttribute("downloadList", list);
+		System.out.println(list);
+		request.setAttribute("downloadlist", list);
 		RequestDispatcher rd = request.getRequestDispatcher("/download.jsp");
 		rd.forward(request, response);
 	}

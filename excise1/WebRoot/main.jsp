@@ -7,10 +7,10 @@
     <title>主页</title>
     <link rel="stylesheet" href="main.css">
 </head>
-<body style="background-image: url(./image/preview1.jpg); background-position: center center; background-size: 100%;"> 
+<body style="background-image: url(./images/preview1.jpg); background-position: center center; background-size: 100%;"> 
  <!-- <div id="d">当前用户:admin </div> -->
  <span id="d">当前用户：${chrName}</span>
- <a id="c" href="servlet/LogoutController.do">【安全退出】</a>
+ <a id="c" href="LogoutController.do">【安全退出】</a>
  <br>
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -19,7 +19,7 @@
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
  <a class="a" href="main.jsp">首页</a>
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
- <a class="a" href="download.jsp">下载</a>
+ <a class="a" href="GetDownloadList.do">下载</a>
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
  <a class="a" href="javascrpit:;">增加</a>
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

@@ -2,26 +2,31 @@ package dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
-import javax.resource.cci.ResultSet;
+
 
 import com.mysql.jdbc.PreparedStatement;
 
 import vo.Download;
 
 public class DownloadDao {
+	private static final String URL = "jdbc:mysql://localhost:3306/excise";
+	private static final String userName1 = "root";
+	private static final String pwd = "123";
 	public ArrayList<Download> query(){
 		ArrayList<Download> list = new ArrayList<Download>();
+			Connection con = null;
+			PreparedStatement pst = null;
+			ResultSet rs = null;
 		try{
 			Class.forName("com.mysql.jdbc.Driver");
-			Connection con = DriverManager.getConnection(
-					"jdbc:mysql://localhost:3306/excise?useunicode=true&character=utf-8",
-					"root","123456");
-			String sql = "select * from t_downloadList";
-			PreparedStatement pst = (PreparedStatement) con.prepareStatement(sql);
-			ResultSet rs = (ResultSet) pst.executeQuery();
+			con = DriverManager.getConnection(URL,userName1,pwd);
+			String sql = "select * from t_downloadlist";
+			pst = (PreparedStatement) con.prepareStatement(sql);
+			rs = (ResultSet) pst.executeQuery();
 			while(rs.next()){
 				Download download = new Download();
 				download.setId(rs.getInt("id"));
@@ -37,9 +42,16 @@ public class DownloadDao {
 				
 				list.add(download);
 			}
-			con.close();
 		}catch(Exception e){
 			e.printStackTrace();
+		}finally{
+			try{
+			if(rs!=null)rs.close();
+			if(pst!=null)pst.close();
+			if(con!=null)con.close();
+			}catch(Exception e){
+				e.printStackTrace();
+			}
 		}
 		return list;
 	}
@@ -48,9 +60,7 @@ public class DownloadDao {
 		Download download=null;
 		try{
 			Class.forName("com.mysql.jdbc.Driver");
-			Connection con = DriverManager.getConnection(
-					"jdbc:mysql://localhost:3306/excise?useunicode=true&character=utf-8",
-					"root","123456");
+			Connection con = DriverManager.getConnection(URL,userName1,pwd);
 			String sql = "select * from t_downloadList where id=?";
 			PreparedStatement pst = (PreparedStatement) con.prepareStatement(sql);
 			pst.setInt(1,id);
@@ -68,7 +78,6 @@ public class DownloadDao {
 				download.setStar(rs.getInt("star"));
 				download.setImage(rs.getString("image"));
 				download.setTime(rs.getString("time"));
-				download.setSizeStr(sizeStr);
 			}
 			con.close();
 		}catch(Exception e){

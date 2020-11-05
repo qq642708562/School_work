@@ -116,4 +116,8 @@ public class Download {
 		this.image = image;
 	}
 	
+	public String toString(){
+		return "id"+id+"name"+name+"path"+path;
+	}
+	
 }
