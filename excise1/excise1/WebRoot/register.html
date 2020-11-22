@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>用户注册</title>
+    <link rel="stylesheet" href="./css/register.css">
+    <script src="./js/jquery-3.5.1.js"></script>
+    <script src="./js/register.js"></script>
+</head>
+
+<body>
+    
+    <div id="d">
+        <form class="box" action="login.html" method="post">
+            <span id="s1">账号注册</span>&nbsp;&nbsp;&nbsp;
+            <a id="s2" href="./login.html">已有账号,请登录</a><br />
+            <input type="text" id="userName" name="userName" placeholder="用户名" /><br />
+            <span class="error" id="nameError"></span>
+            <input type="text" id="name" name="name" placeholder="真实姓名" /><br />
+            <span class="error" id="realnameError"></span>
+            <input type="text" id="mail" name="mail" placeholder="邮箱" /><br />
+            <span class="error" id="emailError"></span>
+            <p>
+                <select name="provinceCode" id="province">
+                    <option value="">请选择省份</option>
+                </select><br>
+                <span class="error" id="provinceError"></span>
+            </p>
+            <p>
+                <select name="cityCode" id="city">
+                    <option value="">请选择城市</option>
+                </select><br>
+                <span class="error" id="cityError"></span>
+            </p>
+            <input type="password" id="password" name="password" placeholder="密码" /><br />
+            <span class="error" id="pwdError"></span>
+            <input type="password" id="pwd" name="pwd" placeholder="确认密码" /><br />
+            <span class="error" id="pwdError2"></span>
+            <input type="button" value="注册" onclick="registerCheck()"><br />
+        </form>
+    </div>
+</body>
+
+</html>
